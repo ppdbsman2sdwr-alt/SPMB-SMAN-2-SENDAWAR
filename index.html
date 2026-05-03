@@ -3,39 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SPMB 2026 | SMAN 2 Sendawar</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
-  margin:0;
-  font-family:sans-serif;
-  background:linear-gradient(135deg,#00264d,#00509e);
+  font-family:'Poppins',sans-serif;
   color:white;
-  text-align:center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('assets/img/bg-sekolah.jpg');
+  background-size:cover;
+  background-position:center;
 }
 
+/* HEADER */
 .header{
-  padding:60px 20px;
+  text-align:center;
+  padding:60px 20px 30px;
+  animation: fadeDown 1s ease;
 }
 
+.logo{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.logo img{
+  height:60px;
+  background:white;
+  padding:5px;
+  border-radius:8px;
+}
+
+.header h1{
+  font-size:42px;
+  letter-spacing:2px;
+}
+
+.header p{
+  margin-top:10px;
+  opacity:0.9;
+}
+
+/* GRID */
 .container{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:20px;
   padding:30px;
 }
 
+/* CARD */
 .card{
-  background:white;
+  background:rgba(255,255,255,0.95);
   color:#333;
   padding:25px;
-  border-radius:15px;
+  border-radius:18px;
+  text-align:center;
   text-decoration:none;
   transition:0.3s;
+  animation: fadeUp 1s ease;
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-10px) scale(1.03);
+  background:#ffd700;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  opacity:0.8;
+}
+
+/* ANIMASI */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
 }
 </style>
 </head>
@@ -43,8 +100,15 @@ body{
 <body>
 
 <div class="header">
+
+  <div class="logo">
+    <img src="assets/img/logo-sekolah.png">
+    <img src="assets/img/logo-provinsi.png">
+  </div>
+
   <h1>SPMB 2026</h1>
   <p>SMA Negeri 2 Sendawar<br><b>Sekolah Bakat Anak Negeri</b></p>
+
 </div>
 
 <div class="container">
@@ -56,6 +120,10 @@ body{
   <a href="kegiatan.html" class="card">🎯 Kegiatan Siswa</a>
 
 </div>
+
+<footer>
+© 2026 SMA Negeri 2 Sendawar
+</footer>
 
 </body>
 </html>
